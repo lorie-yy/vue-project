@@ -1,0 +1,431 @@
+html, body {
+  height: 100%;
+  min-height: 100%;
+  width: 100%;
+  // width: 133.333vh;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); //解决在iPhone,ipad设备上点击时会出现一个半透明的灰色背景
+} 
+.flex
+{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex1
+{
+    -webkit-box-flex:1;
+    -ms-flex:1;
+    flex:1;
+}
+.flex2
+{
+    -webkit-box-flex:2;
+    -ms-flex:2;
+    flex:2;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.justbetween
+{
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.centercenter
+{
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+*::-webkit-scrollbar {
+  width: 0vh;
+  height: 0vh;
+}
+.flexCol
+{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+body::-webkit-scrollbar {
+  width: 0vh;
+  height: 0vh;
+}
+.flexWrap
+{
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+input {
+  -webkit-tap-highlight-color:rgba(0,0,0,0);
+  &:-webkit-input-placeholder{
+    color:#666;
+    // transform: scale(1)
+  }
+  &:-moz-placeholder{   /* Mozilla Firefox 19+ */
+    color:#666;
+    // transform: scale(1)
+  }
+  &:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    color:#666;
+    // transform: scale(1)
+  }
+  &:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    color:#666;
+    // transform: scale(1)
+  }
+}
+
+// 解决采用vw适配方式在IOS端图片的不正常显示问题
+img{
+  content: normal !important;
+}
+
+.weui-cells {
+  margin-top: 0!important;
+  background-color: transparent!important;
+  &::before {
+    display: none;
+  }
+  &::after {
+    display: none;
+  }
+  .weui-cell {
+    // align-items: flex-start;
+    // height: 3.125vh;
+    height: .234rem;
+    // line-height: 3.125vh;
+    // border-bottom: 0.13vh solid #dcdcdc;
+    border-bottom: .01rem solid #dcdcdc;
+    // margin-bottom: 3.776vh;
+    margin-bottom: .283rem;
+    // padding: 0 0 1.172vh 0.651vh;
+    padding: 0 0 .088rem  .049rem;
+    // font-size: 3.125vh;
+    font-size: .234rem;
+    &:last-of-type {
+      // margin-bottom: 6.51vh;
+      margin-bottom: .488rem;
+      > .weui-cell__hd {
+        label {
+          letter-spacing: initial;
+        }
+      }
+    }
+    &::before {
+      display: none;
+    }
+    &.active {
+      border-bottom-color: #4697db;
+    }
+    .weui-cell__hd {
+      align-self: flex-start; 
+      // height: 1.563vh;
+      font-size: 0;
+      // line-height: 3.125vh;
+      > label {
+        // width: 15.104vh!important;
+        // height: 3.125vh;
+        // line-height: 3.125vh;
+        // font-size: 2.995vh;
+        // text-align: left;
+        // letter-spacing: 0.977vh;
+        // white-space: nowrap;
+        // color: #000; 
+        
+        width: 1.133rem!important;
+        height: .234rem;
+        // line-height: .234rem;
+        line-height: .260rem;
+        font-size: .225rem;
+        text-align: left;
+        letter-spacing: .073rem;
+        white-space: nowrap;
+        color: #000; 
+      }
+      .input-icon {
+        // width:3.125vh!important;
+        // height: 3.125vh!important;
+        // margin-right: 1.432vh;
+        width: .234rem!important;
+        height: .234rem!important;
+        margin-right: .107rem;
+      }
+    }
+    .weui-cell__bd {
+      display: flex;
+      // font-size: 2.995vh;
+      // height: 3.125vh;
+      // font-size: .225rem;
+      height: .234rem;
+      // line-height: .146rem;
+      .weui-input {
+        // height: 3.125vh;
+        height: .234rem;
+        line-height: initial;
+        line-height: 0.312rem;
+        // line-height: .234rem;
+        // padding-bottom: 1.066vh;
+        padding-bottom: .078rem;
+        color: #000;
+        &::-webkit-input-placeholder {
+          color: #c8c8c8;
+          font-weight: normal;
+        }
+        &::-ms-input-placeholder {
+          color: #c8c8c8;
+          font-weight: normal;
+        }
+        &::-moz-placeholder {
+          color: #c8c8c8;
+          font-weight: normal;
+        }
+      }
+    }
+    .weui-cell__ft {
+      >i {
+        // font-size: 2.865vh; 
+        font-size: .215rem;
+      }
+    }
+  }
+    
+}
+
+
+.vux-toast {
+  .weui-toast.weui-toast_text {
+    top: .195rem;
+    height: .391rem;
+    line-height: .391rem;
+    white-space: nowrap;
+    > .weui-toast__content {
+      font-size: .195rem;
+      padding: 0 .107rem!important;
+    }
+  }
+}
+
+// loading样式调整
+.weui-loading_toast {
+  .weui-toast {
+    width: 1.172rem;
+    height: 1.172rem;
+    min-height: initial;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    > i {
+      width: .391rem;
+      height: .391rem;
+    }
+    > .weui-toast__content {
+      margin-top: .137rem;
+      font-size: .156rem;
+    }
+  }
+}
+
+// dialog样式修改
+.vux-alert {
+  .weui-dialog {
+    width: 2.93rem!important;
+    max-width: initial!important;
+    .weui-dialog__hd {
+      padding: .244rem .098rem .146rem;
+      .weui-dialog__title {
+        font-size: .176rem;
+      }
+    }
+    .weui-dialog__bd {
+      padding-bottom: .195rem;
+      font-size: .146rem;
+    }
+    .weui-dialog__ft {
+      height: .439rem;
+      line-height: .439rem;
+      > a{
+        // font-size: 2.344vh;
+        font-size: .176rem;
+      }
+    }
+  }
+}
+
+
+
+
+// 取消a标签点击时候的蓝色背景
+a,a:hover,a:active,a:visited,a:link,a:focus{
+  // -webkit-tap-highlight-color:rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+  outline:none;
+  background: none;
+  text-decoration: none;
+}
+
+// 清除浮动
+.clearfix::after {
+    content: "";
+    height: 0;
+    visibility: hidden;
+    clear: both;
+    display: block;
+}
+
+.btn-back {
+  position: fixed;
+  top: .293rem;
+  left: .342rem;
+  width: .488rem;
+  height: .488rem;
+  background: url(~assets/image/public/btn_back.png) no-repeat center/.488rem;
+}
+
+@media screen and (max-width: 960px){
+  .weui-cells {
+    .weui-cell {
+      // height: 3.125vh;
+      height: 12px;
+      border-bottom: 1px solid #dcdcdc;
+      // margin-bottom: 3.776vh;
+      margin-bottom: 14px;
+      // padding: 0 0 1.172vh 0.651vh;
+      padding: 0 0 4px 2px;
+      font-size: 12px;
+      // font-size: .234rem;
+      // font-size: 12px;
+      &:last-of-type {
+        // margin-bottom: 6.51vh;
+        margin-bottom: 24px;
+        > .weui-cell__hd {
+          label {
+            letter-spacing: initial;
+          }
+        }
+      }
+      .weui-cell__hd {
+        height: 12px;
+        > label {
+          width: 56px!important;
+          // width: 15.104vh!important;
+          // height: 3.125vh;
+          height: 12px;
+          line-height: 1;
+          padding: 3px 0;
+          // line-height: 3.125vh;
+          font-size: 12px;
+          letter-spacing: 4px;
+        }
+        .input-icon {
+        //   width:3.125vh!important;
+        // height: 3.125vh!important;
+          width:12px!important;
+          height: 12px!important;
+          margin-right: 5px;
+        }
+      }
+      .weui-cell__bd {
+        display: flex;
+        // align-items: flex-start;
+        // font-size: 2.995vh;
+        // font-size: .225rem;
+        // height: 3.125vh;
+        font-size: 12px;
+        height: 12px;
+        .weui-input {
+          padding-bottom: 3px;
+          height: inherit;
+          // height: 12px;
+          line-height: initial;
+          // line-height: 1;
+          
+          // height: 3.125vh;
+          // padding-bottom: 1.066vh;
+          // padding-bottom: 4px;
+        }
+      }
+      .weui-cell__ft {
+        >i {
+          font-size: .215rem; 
+        }
+      }
+    }
+  }
+  .weui-toast.weui-toast_text {
+    top: 10px;
+    height: 20px;
+    line-height: 20px;
+    white-space: nowrap;
+    > .weui-toast__content {
+      font-size: 10px;
+      padding: 0 5px!important;
+    }
+  }
+  
+  // loading样式调整
+  .weui-loading_toast {
+    .weui-toast {
+      width: 59px;
+      height: 59px;
+      min-height: initial;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      > i {
+        width: 20px;
+        height: 20px;
+      }
+      > .weui-toast__content {
+        margin-top: 7px;
+        font-size: 2.083vh;
+      }
+    }
+  }
+  
+  // dialog样式修改
+  .vux-alert {
+    .weui-dialog {
+      width: 146px!important;
+      max-width: initial!important;
+      .weui-dialog__hd {
+        padding: 12px 5px 7px;
+        .weui-dialog__title {
+          font-size: 9px;
+        }
+      }
+      .weui-dialog__bd {
+        padding-bottom: 10px;
+        font-size: 1.953vh;
+      }
+      .weui-dialog__ft {
+        height: 22px;
+        line-height: 22px;
+        > a{
+          font-size: 2.344vh;
+        }
+      }
+    }
+  }
+  .btn-back {
+    top: .293rem;
+    left: .342rem;
+    width: 24px;
+    height: 24px;
+    background: url(~assets/image/public/btn_back.png) no-repeat center/24px;
+  }
+
+  
+}

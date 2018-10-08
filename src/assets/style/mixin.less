@@ -1,0 +1,162 @@
+// 背景
+.bis(@url, @size: 100% 100%) {
+  background-image: url(@url);
+  background-repeat: no-repeat;
+  background-position: center;
+	background-size: @size;
+}
+
+//定位全屏
+.allCover{
+	position:absolute;
+  top:0;
+  right:0;
+  left: 0;
+  bottom: 0;
+}
+
+//transform上下左右居中
+.ctt {  
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+.tb {  
+	position: absolute;
+	top: 50%;
+  transform: translateY(-50%);
+}
+
+//定位左右居中
+.lr {  
+	position: absolute;
+	left: 50%;
+  transform: translateX(-50%);
+}
+
+//定位左右居中
+// .posA(@left) {  
+// 	position: absolute;
+// 	left: 50%;
+//   transform: translateX(-50%);
+// }
+
+//宽高
+.wh(@width, @height){
+	width: @width;
+	height: @height;
+}
+
+//字体大小，颜色
+.sc(@size, @color, @align: center){
+	font-size: @size;
+  color: @color;
+  text-align: @align
+}
+
+
+//flex 布局和 子元素 左右对其方式
+.flexJ(@type: center){
+	display: flex;
+  justify-content: @type;
+}
+//flex 布局和 子元素 上下对其方式
+.flexA(@type: center) {
+  display: flex;
+  justify-content: @type;
+}
+
+//flex 布局和 子元素 上下左右对其方式
+.flexC(@jc: center, @al: center) {
+  display: flex;
+  justify-content: @jc;
+  align-items: @al;
+}
+
+// @bt: 63px, @width: 310px, @height: 107px
+.btn-submit(@bt: .308rem, @width: 1.514rem, @height: .522rem) {
+  .wh(@width, @height);
+  position: absolute;
+  bottom: @bt;
+  >img {
+    height: inherit;
+    width: inherit;
+  }
+}
+
+.toolTipList(@top, @right) {
+  position: absolute;
+  // width: 500px;
+  width: 2.441rem;
+  top: @top;
+  right: @right;
+  .tooltip {
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    // width: 500px;
+    // height: 100px;
+    // line-height: 100px;
+    width: 2.441rem;
+    height: .488rem;
+    line-height: .488rem;
+    // padding-left: 56px;
+    padding-left: .273rem;
+    background: url(~assets/image/public/img_hint.png) no-repeat center/100%;
+    // font-size:36px;
+    font-size: .176rem;
+    text-align: left;
+    color: #e60012;
+    &:nth-of-type(2) {
+      // top: 125px;
+      top: .61rem;
+    }
+    &:nth-of-type(3) {
+      // top: 254px;
+      top: 1.24rem;
+    }
+    &:nth-of-type(4) {
+      // top: 374px;
+      top: 1.826rem;
+    }
+  }
+}
+.toolTipListMedia(@top, @right) {
+  position: absolute;
+  // width: 500px;
+  width: 122px;
+  top: @top,;
+  right: @right;
+  .tooltip {
+    position: absolute;
+    left: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 122px;
+    height: 25px;
+    line-height: 25px;
+    // transform: translateY(-50%);
+    // margin-bottom: 36px;
+    // padding-left: 56px
+    padding-left: 14px;
+    background: url(~assets/image/public/img_hint.png) no-repeat center/100%;
+    font-size:.176rem;
+    text-align: left;
+    color: #e60012;
+    &:nth-of-type(2) {
+      // top: 125px;
+      top: 31px;
+    }
+    &:nth-of-type(3) {
+      // top: 254px;
+      top: 62px;
+    }
+    &:nth-of-type(4) {
+      top: 91px;
+    }
+  }
+}
